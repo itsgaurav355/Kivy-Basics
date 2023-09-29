@@ -1,0 +1,31 @@
+Manager:
+    HomeScreen:
+    FirstScreen:
+
+<HomeScreen>:
+    name : "login"
+    Label : 
+        text: "Login Here"
+        Button:
+            height: "100px"
+        
+           
+            text: "Details"
+            #This method will change screen 1 to 2 
+            on_release:
+                app.root.current = "Details"
+                root.manager.transition.direction = "left"
+
+<FirstScreen>:
+    name : "Details"
+    Label : 
+        text: "Login Here"
+        valign:'middle'
+        Button:
+            height: "100px"
+            
+            text : "Back"
+            on_release:
+                app.root.current = "login"
+                root.manager.transition.direction = "right"
+        
